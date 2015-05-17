@@ -8,3 +8,6 @@ git push -u origin master
 
 # それ以降
 gp "commit comment"
+
+# clone
+git clone git@github.com:tvcou/my_setting.git
