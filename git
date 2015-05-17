@@ -11,3 +11,27 @@ gp "commit comment"
 
 # clone
 git clone git@github.com:tvcou/my_setting.git
+
+# clone
+git clone git@github.com:tvcou/di_todo_apps.git
+cd di_todo_apps/
+bundle install
+history | tail
+
+[tatsu@vagrant-centos65 di_todo_apps]$ rake db:migrate
+== 20150517032126 CreateProjects: migrating ===================================
+-- create_table(:projects)
+   -> 0.0007s
+== 20150517032126 CreateProjects: migrated (0.0008s) ==========================
+
+[tatsu@vagrant-centos65 di_todo_apps]$ rails db
+SQLite version 3.6.20
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .schema
+CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL);
+CREATE TABLE "schema_migrations" ("version" varchar NOT NULL);
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version");
+sqlite> .exit
+[tatsu@vagrant-centos65 di_todo_apps]$
+
