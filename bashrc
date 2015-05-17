@@ -5,7 +5,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# bash_history
+# for bash_history
 function share_history {
     history -a
     history -c
@@ -22,12 +22,12 @@ FDrm()
 alias docker="sudo docker"
 alias Drm="FDrm"
 
-# rails
+# for rails
 export PATH=$PATH:/opt/chef/embedded/bin:/opt/chef/bin
 alias rs='rails s -b 0.0.0.0 &> /tmp/s_log'
 alias re='killall ruby'
 
-# git
+# for git
 gp()
 {
   git add .
